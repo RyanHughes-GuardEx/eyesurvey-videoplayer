@@ -26,7 +26,7 @@ SECRET_KEY = 'nxz2yxkg)u+^n^4iy%^uco+0ab(+gy1@@fhsdzl^dhnwxb0h7%'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-                'eyesurvey-env.xqacack9ce.ca-central-1.elasticbeanstalk.com',
+                'eyeSurvey.ca-central-1.elasticbeanstalk.com',
                 '127.0.0.1',
                 ]
 
