@@ -25,7 +25,8 @@ SECRET_KEY = 'nxz2yxkg)u+^n^4iy%^uco+0ab(+gy1@@fhsdzl^dhnwxb0h7%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eyesurvey-testoct21.tnbtbmmj7p.ca-central-1.elasticbeanstalk.com',
+ALLOWED_HOSTS = [
+                'eyesurvey-env.xqacack9ce.ca-central-1.elasticbeanstalk.com',
                 '127.0.0.1',
                 ]
 
