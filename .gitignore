@@ -1,4 +1,7 @@
 eyesurvey/__pycache__/
+venv/
+.idea/
+*.pyc
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
