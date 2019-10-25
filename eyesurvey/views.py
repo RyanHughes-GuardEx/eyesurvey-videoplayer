@@ -1,4 +1,4 @@
 from django.shortcuts import HttpResponseRedirect
 
 def index(request):
-    return HttpResponseRedirect('/index.html/')
+    return HttpResponseRedirect('/index.html')

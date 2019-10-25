@@ -12,11 +12,15 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.conf.urls import url
+from django.views.generic.base import TemplateView
 
 from .views import index
 
 urlpatterns = [
-    path(r'^$', index, name='index'),
-    path('admin/', admin.site.urls),
+    url(r'^$', index, name='index'),
+    url(r'^index.html', TemplateView.as_view(template_name='index.html')),
+    url(r'^admin/', admin.site.urls),
 ]
+
+
