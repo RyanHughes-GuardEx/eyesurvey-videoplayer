@@ -15,10 +15,10 @@ from django.contrib import admin
 from django.conf.urls import url
 from django.views.generic.base import TemplateView
 
-from .views import index
+from .views import detail
 
 urlpatterns = [
-    url(r'^$', index, name='index'),
+    url(r'^$', detail, name='index'),
     url(r'^index.html', TemplateView.as_view(template_name='index.html')),
     url(r'^admin/', admin.site.urls),
 ]

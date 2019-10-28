@@ -1,9 +1,21 @@
-{% extends "skin2.html" %}
+{% extends "skin.html" %}
 
 {% block title %}
-    Test Page
+    Rahul's Page
 {% endblock %}
 
-{% block mystring %}
-    My Test Sting
+{% block video_link %}
+    "https://player.vimeo.com/video/366834292"
+{% endblock %}
+
+{% block questionblock %}
+<h1>{{ question.question_text }}</h1>
+    <form method="post" action="#">
+        {% csrf_token %}
+        <input type="radio" name="choice" id="choice_yes" value="Yes">
+        <label for="choice_yes">Yes</label><br>
+        <input type="radio" name="choice" id="choice_no" value="No">
+        <label for="choice_no">No</label><br>
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}

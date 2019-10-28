@@ -29,10 +29,12 @@ ALLOWED_HOSTS = [
                 'eyeSurvey.ca-central-1.elasticbeanstalk.com',
                 '127.0.0.1',
                 ]
+SITE_ID = 2
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -112,8 +115,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
 STATIC_URL = '/static/'
