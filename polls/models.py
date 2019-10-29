@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime as dt
 
 class Question(models.Model):
     question_text = models.CharField(max_length=500)
@@ -8,9 +9,11 @@ class Question(models.Model):
 
 class Responses(models.Model):
     user = models.CharField(max_length=100)
-    timestamp = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     nystagmus_present = models.CharField(max_length=50)
     video_link = models.CharField(max_length=200)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, default=0)
 
 """
 class Video(models.Model):

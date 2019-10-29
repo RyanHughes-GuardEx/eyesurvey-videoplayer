@@ -1,4 +1,4 @@
-# eyesurvey-videoplayer
+eyesurvey-videoplayer
 -----------------------
 
 This is the website for the nystagmus survey of the DRE officers.  It's setup to be used on AWS's ElasticBeanstalk.  
@@ -20,8 +20,17 @@ or to edit current EB configuration
     eb init -i
 ```
 
+Here is a useful [Elastic Beanstalk tutorial](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html). 
+
 ### Notes
 Python libraries needed:
  - Django==2.1.*  (due to SQLite version mismatch)
  - cement==3.8.3
-
+ 
+---
+## To Do:
+- [ ] add sign in authentication
+- [ ] add SSL certificate
+- [ ] change URL to something like *testing.guard-ex.net* ??
+- [ ] write polls.utils.get_next_video() function for dynamic selection
+- [ ] save results to database

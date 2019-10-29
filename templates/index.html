@@ -8,9 +8,13 @@
     "https://player.vimeo.com/video/366834292"
 {% endblock %}
 
+{% block display_error %}
+    {% if error_message %}<div class="row justify-content-center text-danger"><strong>{{ error_message }}</strong></div>{% endif %}
+{% endblock %}
+
 {% block questionblock %}
 <h1>{{ question.question_text }}</h1>
-    <form method="post" action="#">
+    <form method="post" action="{% url 'polls:vote' 'wq248' %}">    {# {% url 'polls:vote' user_id %} #}
         {% csrf_token %}
         <input type="radio" name="choice" id="choice_yes" value="Yes">
         <label for="choice_yes">Yes</label><br>
