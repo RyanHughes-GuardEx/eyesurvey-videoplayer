@@ -7,13 +7,10 @@ from django.http import HttpResponse
 from polls.models import Responses, Question
 
 def vote(request, user_id):
-    question = get_object_or_404(Question, pk=1)  # only 1 question
+    response = Responses()
     try:
-        if request.POST['choice'] == 'Yes':
-            choicenum = 1  # a 'yes'
-        else:
-            choicenum = 0  # a 'no'
-        selected_choice = question.responses_set.get(pk=choicenum)
+        question = get_object_or_404(Question, pk=1)  # only 1 question
+        recorded_choice = response.create_response(user=user_id, nystagmus=request.POST['choice'], video='-1', question=question)
     except (KeyError, Responses.DoesNotExist):
         # Redisplay the question voting form.
         return render(request, 'index.html', {
@@ -21,8 +18,7 @@ def vote(request, user_id):
             'error_message': "You didn't select a choice.",
         })
     else:
-        selected_choice.votes += 1
-        selected_choice.save()
+        recorded_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.

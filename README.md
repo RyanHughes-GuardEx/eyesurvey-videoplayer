@@ -33,4 +33,5 @@ Python libraries needed:
 - [ ] add SSL certificate
 - [ ] change URL to something like *testing.guard-ex.net* ??
 - [ ] write polls.utils.get_next_video() function for dynamic selection
-- [ ] save results to database
+- [x] save results to database
+- [ ] save video link to database response
