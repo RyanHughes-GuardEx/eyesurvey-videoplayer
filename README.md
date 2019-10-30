@@ -31,7 +31,7 @@ Python libraries needed:
 ## To Do:
 - [ ] add sign in authentication
 - [ ] add SSL certificate
-- [ ] change URL to something like *testing.guard-ex.net* ??
+- [ ] change URL to something like *testing.guard-ex.net*
 - [ ] write polls.utils.get_next_video() function for dynamic selection
 - [x] save results to database
 - [ ] save video link to database response
