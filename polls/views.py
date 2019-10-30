@@ -21,8 +21,10 @@ def vote(request, user_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(user_id,)))
+        video_num = '0000000'
+        return HttpResponseRedirect(reverse('polls:results', args=(user_id, video_num)))   # reverse() constructs the link for the name='results' line in polls/urls.py
 
-def results(request, user_id):
-    response = "Here is the current user: %s."
-    return HttpResponse(response % user_id)
+def results(request, user_id, video_num):
+    response = "Here is the user: {usr} and the video number is: {vid}".format(usr=user_id, vid=video_num)
+    # should call utils.get_next_video() function here to redirect to the proper video
+    return HttpResponse(response)

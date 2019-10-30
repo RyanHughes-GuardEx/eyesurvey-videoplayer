@@ -18,10 +18,10 @@ from django.views.generic.base import TemplateView
 from .views import detail
 
 urlpatterns = [
-    url(r'^$', detail, name='index'),
+    url(r'^$', detail, name='index'),  # root website
     url(r'^index.html', TemplateView.as_view(template_name='index.html')),
-    url(r'^polls/', include('polls.urls', namespace='polls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^polls/', include('polls.urls', namespace='polls')),   # http://.../polls/*
+    url(r'^admin/', admin.site.urls),    # http://.../admin/*
 ]
 
 
