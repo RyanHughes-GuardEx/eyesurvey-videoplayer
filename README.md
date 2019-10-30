@@ -23,9 +23,10 @@ or to edit current EB configuration
 Here is a useful [Elastic Beanstalk tutorial](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html). 
 
 ### Notes
-Python libraries needed:
+Python libraries needed for ElasticBeanstalk to work properly:
  - Django==2.1.*  (due to SQLite version mismatch)
  - cement==3.8.3
+ - Current Python version: Python 3.6
  
 ---
 ## To Do:

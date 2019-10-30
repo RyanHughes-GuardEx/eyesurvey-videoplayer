@@ -25,4 +25,4 @@ def vote(request, user_id):
 
 def results(request, user_id):
     response = "Here is the current user: %s."
-    return HttpResponseRedirect(response % user_id)
+    return HttpResponse(response % user_id)
